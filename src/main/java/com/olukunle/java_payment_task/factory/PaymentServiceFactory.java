@@ -4,8 +4,8 @@ import com.olukunle.java_payment_task.constants.ResponseStatus;
 import com.olukunle.java_payment_task.constants.StringValues;
 import com.olukunle.java_payment_task.exceptions.BadRequestException;
 import com.olukunle.java_payment_task.payload.request.PaymentModel;
-import com.olukunle.java_payment_task.service.DeviceService;
-import com.olukunle.java_payment_task.service.PaymentService;
+import com.olukunle.java_payment_task.service.deviceService.DeviceService;
+import com.olukunle.java_payment_task.service.paymentService.PaymentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

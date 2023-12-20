@@ -1,4 +1,4 @@
-package com.olukunle.java_payment_task.service;
+package com.olukunle.java_payment_task.service.paymentService;
 
 import com.olukunle.java_payment_task.constants.StringValues;
 import com.olukunle.java_payment_task.entity.Transaction;
@@ -18,7 +18,7 @@ public class CardPaymentService implements PaymentService<CardPaymentModel> {
     private final TransactionRepository transactionRepository;
     @Override
     public PaymentResponse makePayment(CardPaymentModel request) {
-        // Make call to a payment gateway
+        // Todo: Do all necessary validation base on the payment type and Make a call to a payment gateway
         String transRef = UUID.randomUUID().toString();
         Transaction transaction = new Transaction();
         BeanUtils.copyProperties(request, transaction);

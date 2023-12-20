@@ -1,4 +1,4 @@
-package com.olukunle.java_payment_task.service;
+package com.olukunle.java_payment_task.service.paymentService;
 
 import com.olukunle.java_payment_task.config.PaymentTypeConfig;
 import com.olukunle.java_payment_task.constants.ResponseStatus;
@@ -12,6 +12,7 @@ import com.olukunle.java_payment_task.payload.request.PaymentModel;
 import com.olukunle.java_payment_task.payload.request.PaymentRequest;
 import com.olukunle.java_payment_task.payload.response.PaymentResponse;
 import com.olukunle.java_payment_task.repository.TransactionRepository;
+import com.olukunle.java_payment_task.service.deviceService.DeviceService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -70,6 +71,7 @@ public class PaymentServiceImpl {
 
         PageRequest pageRequest = PageRequest.of(pageNumber, pageSize);
         Page<Transaction> transactions = transactionRepository.findAllByUserId(userId, pageRequest);
+        log.info("transactions --> {}", transactions);
         if (Optional.ofNullable(transactions).isEmpty()) {
             response.setCode(ResponseStatus.FAILED.getCode());
             response.setStatus(ResponseStatus.FAILED.getStatus());

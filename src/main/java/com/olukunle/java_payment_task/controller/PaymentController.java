@@ -1,15 +1,13 @@
 package com.olukunle.java_payment_task.controller;
 
 import com.olukunle.java_payment_task.payload.BaseResponse;
-import com.olukunle.java_payment_task.payload.request.CardPaymentModel;
 import com.olukunle.java_payment_task.payload.request.PaymentRequest;
 import com.olukunle.java_payment_task.payload.response.PaymentResponse;
-import com.olukunle.java_payment_task.service.PaymentServiceImpl;
+import com.olukunle.java_payment_task.service.paymentService.PaymentServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

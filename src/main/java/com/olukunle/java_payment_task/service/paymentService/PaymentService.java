@@ -1,4 +1,4 @@
-package com.olukunle.java_payment_task.service;
+package com.olukunle.java_payment_task.service.paymentService;
 
 import com.olukunle.java_payment_task.payload.request.PaymentModel;
 import com.olukunle.java_payment_task.payload.response.PaymentResponse;

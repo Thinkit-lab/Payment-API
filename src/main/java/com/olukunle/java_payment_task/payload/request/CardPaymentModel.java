@@ -9,7 +9,6 @@ import java.util.regex.Pattern;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@Builder
 public class CardPaymentModel extends BasePaymentModel {
     private String cardNumber;
     private String cardHolderName;

@@ -6,7 +6,6 @@ import com.olukunle.java_payment_task.exceptions.EncryptionException;
 import com.olukunle.java_payment_task.exceptions.GeneralException;
 import com.olukunle.java_payment_task.exceptions.NotFoundException;
 import com.olukunle.java_payment_task.payload.BaseResponse;
-import jakarta.servlet.ServletException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
@@ -105,16 +104,5 @@ public class ApiAdvice {
                 errors),
                 HttpStatus.BAD_REQUEST);
     }
-
-//    @ResponseStatus(HttpStatus.BAD_REQUEST)
-//    @ExceptionHandler(value = { ServletException.class })
-//    protected ResponseEntity<?> handleFilterException(ServletException ex) {
-//        return new ResponseEntity<>(new BaseResponse<>(
-//                FAILED.getStatus(),
-//                FAILED.getCode(),
-//                INVALID_AUTHORIZATION.getStatus(),
-//                ex.getMessage()),
-//                HttpStatus.BAD_REQUEST);
-//    }
 
 }

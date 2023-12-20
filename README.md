@@ -27,7 +27,7 @@ To run this project, you need to have the following installed:
 2. **Build the project:**
 
     ```bash
-    cd payment-api
+    cd java_payment_task
     mvn clean install
     ```
 
@@ -63,7 +63,7 @@ The API is designed to work seamlessly on both mobile devices and browsers. The 
 
 ## Database
 
-The application uses an H2 database for data storage. You can access the H2 console at `http://localhost:8080/h2-console` (credentials: username - sa, password - password).
+The application uses an H2 database for data storage. You can access the H2 console at `http://localhost:2023/h2-console` (credentials: username - sa, password - password).
 
 ## Swagger Documentation
 
